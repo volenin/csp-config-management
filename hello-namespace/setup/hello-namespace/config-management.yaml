@@ -4,6 +4,17 @@ metadata:
   name: config-management
   namespace: config-management-system
 spec:
+  binauthz:
+    enabled: true
+    # Information needed to determine which policy to enforce
+    policyRef:
+      gkeCluster:
+        # The name (or ID) of the GCP project containing the cluster
+        project: artilekt-feng-lab
+        # Location of this cluster
+        location: us-central1
+        # The name of the cluster.
+        name: exam
   clusterName: exam
   git:
     syncRepo: git@github.com:volenin/csp-config-management.git
@@ -22,14 +33,3 @@ spec:
     # logDeniesEnabled: true
     # Uncomment to exempt namespaces
     # exemptableNamespaces: ["namespace-name"]
-  binauthz:
-    enabled: true
-    # Information needed to determine which policy to enforce
-    policyRef:
-      gkeCluster:
-        # The name (or ID) of the GCP project containing the cluster
-        project: artilekt-feng-lab
-        # Location of this cluster
-        location: us-central1
-        # The name of the cluster.
-        name: exam
