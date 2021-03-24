@@ -4,9 +4,9 @@ metadata:
   name: config-management
   namespace: config-management-system
 spec:
-  clusterName: my-cluster
+  clusterName: exam
   git:
-    syncRepo: git@github.com:<GITHUB-USERNAME>/csp-config-management.git
-    syncBranch: 1.0.0
+    syncRepo: git@github.com:volenin/csp-config-management.git
+    syncBranch: "master"
     secretType: ssh
     policyDir: "hello-namespace/config-root"
