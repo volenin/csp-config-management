@@ -4,7 +4,6 @@ metadata:
   name: config-management
   namespace: config-management-system
 spec:
-  clusterName: exam
   git:
     syncRepo: git@github.com:volenin/csp-config-management.git
     syncBranch: "master"
